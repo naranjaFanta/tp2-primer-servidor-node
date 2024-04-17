@@ -1,12 +1,11 @@
 const fs = require('fs')
-//const file = fs.createWriteStream("data.txt")
 
 console.log("-------TP2------");
 
 const array = [2, 10, "go", 4, "c#", 6, "nodejs", true, "java", 9, 1,
 "python", 12, "ruby", "php", false,]
 
-let variable
+
 function filtrarArray(array,condition) {
    let nuevoArray =[]
 switch (condition) {
@@ -37,7 +36,7 @@ return typeof variable === 'number' ? nuevoArray.sort((a,b)=>a-b) :nuevoArray.so
 try {
     //COMENTAR Y DESCOMENTAR PARA PROVAR LA FUNCION CON 'STRING','NUMBER' AND 'BOOLEAN
 
-    const arrayNumbers = "["+filtrarArray(array,"number").join(" , ")+"]"
+    const arrayNumbers = "["+filtrarArray(array,"boolean").join(" , ")+"]"
     fs.writeFileSync('array.txt', arrayNumbers);
 
     // const arrayStrings = "["+filtrarArray(array,"string").join(" , ")+"]"
