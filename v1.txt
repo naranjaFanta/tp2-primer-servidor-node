@@ -1,0 +1,32 @@
+console.log("-------TP2------");
+
+const array = [2, 10, "go", 4, "c#", 6, "nodejs", true, "java", 9, 1,
+"python", 12, "ruby", "php", false,]
+
+let variable
+
+function filtrarArray(array,variable) {
+
+    let nuevoArray =[]
+
+    console.log("Se ingreso una variable de tipo "+typeof variable);
+    for (let index = 0; index < array.length; index++) {
+        if(typeof array[index] === typeof variable){
+            nuevoArray.push(array[index])
+        }
+    }
+    if(typeof variable === Number){
+        return nuevoArray.sort(function(a, b) {
+            return String(a) - String(b);
+        })
+    }else{
+        return nuevoArray.sort()
+    }
+   
+}
+
+try {
+    console.log("["+filtrarArray(array,"").join(" , ")+"]")
+} catch (error) {
+console.log("Ocurrio un error, "+error);
+}

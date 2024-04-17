@@ -1,0 +1,12 @@
+{
+  "name": "tp2-primer-servidor-node",
+  "version": "1.0.0",
+  "description": "primer servidor node",
+  "main": "index.js",
+  "scripts": {
+    "watch":"node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "edu gimenez",
+  "license": "ISC"
+}
